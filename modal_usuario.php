@@ -20,7 +20,11 @@
                                     <?php
                                         include "conexion.php";
                                         try {
-                                            $sql2 = $conexion->prepare("SELECT * FROM personal");
+                                            // $sql2 = $conexion->prepare("SELECT * FROM personal");
+                                            $sentencia = "SELECT * FROM personal where codigo=".$datos['codigoPersonal'];
+                                            $sentencia2 = "SELECT * FROM personal WHERE codigo NOT IN (SELECT codigoPersonal FROM usuario)";
+                                            $sql2 = $conexion->prepare($sentencia." UNION ".$sentencia2);
+                                            // $sql2 = $conexion->prepare($sentencia);
                                             $sql2->execute();
                                             while($dato = $sql2->fetch()){
                                                 ?>

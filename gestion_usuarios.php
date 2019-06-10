@@ -17,7 +17,7 @@
                                     <?php
                                         include "conexion.php";
                                         try {
-                                            $sql = $conexion->prepare("SELECT * FROM personal");
+                                            $sql = $conexion->prepare("SELECT * FROM personal WHERE codigo NOT IN (SELECT codigoPersonal FROM usuario)");
                                             $sql->execute();
                                             while($dato = $sql->fetch()){
                                                 ?>
