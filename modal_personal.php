@@ -37,7 +37,7 @@
                         <input type="checkbox" <?php echo ($datos['vigencia']==1)? 'checked' : '' ?> name="Evigencia" id="Evigencia" class="form-check-input">
                         <label for="Evigencia" class="form-check-label">Vigencia</label>
                     </div>
-                    <button type="button" class="btn btn-success btn-block" onclick="editarPersonal()">REGISTRAR</button>
+                    <button type="button" class="btn btn-info btn-block" onclick="editarPersonal()">EDITAR</button>
                 </form>
             <?php
         }

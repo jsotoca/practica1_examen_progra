@@ -14,6 +14,7 @@ $("#personal_nuevo").submit(function(e){
         datos,
         function(){
             location.reload();
+            $("#personal_nuevo").trigger('reset');
         }
     );
 });
@@ -77,9 +78,19 @@ $("#usuario_nuevo").submit(function(e){
         datos,
         function(){
             location.reload();
+            $("#usuario_nuevo").trigger('reset');
         }
     );
 });
+
+function mostrarClavecita(){
+    var x = document.getElementById("clave");
+    if (x.type === "text") {
+        x.type = "password";
+    } else {
+        x.type = "text";
+    }
+}
 
 function modalUsuario(index){
     const datos = {codigo: index}

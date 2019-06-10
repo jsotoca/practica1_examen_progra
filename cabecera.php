@@ -9,10 +9,10 @@
     <title>PRÁCTICA EXAMEN N°02 - PROGRAMACION AVANZADA</title>
 </head>
 <body>
-    <header class="container cabecera mt-2">
+    <header class="container cabecera mt-3">
         <div class="row d-flex justify-content-center">
             <div class="col-12 text-center text-white p-2">
-                <h1>PRACTICA EXAMEN N°02 PROGRAMACIÓN AVANZANDA</h1>
+                <h1>PRÁCTICA EXAMEN N°02 PROGRAMACIÓN AVANZANDA</h1>
                 <h3>SOTO CABRERA JUAN ANTONIO</h3>
             </div>
         </div>

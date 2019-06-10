@@ -61,11 +61,11 @@
                                             <td><?php echo $dato['nombres'] ." ".$dato['ap_paterno'] ." ".$dato['ap_materno'] ?> </td>
                                             <td><?php echo $dato['dni'] ?></td>
                                             <td><?php echo $dato['telefono'] ?></td>
-                                            <td><?php echo $dato['vigencia'] ?></td>
+                                            <td><?php echo ($dato['vigencia']==1)? 'activo' : 'inactivo' ?></td>
                                             <td>
                                                 <!-- <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#editar_personal">Editar</button> -->
-                                                <button class="btn btn-info btn-sm" onclick="modalPersonal(<?php echo $dato['codigo']?>)">Editar</button>
-                                                <button class="btn btn-warning btn-sm" onclick="eliminarPersonal(<?php echo $dato['codigo']?>)">Eliminar</button>
+                                                <button class="btn btn-info btn-sm mb-1" onclick="modalPersonal(<?php echo $dato['codigo']?>)">Editar</button>
+                                                <button class="btn btn-danger btn-sm mb-1" onclick="eliminarPersonal(<?php echo $dato['codigo']?>)">Eliminar</button>
                                             </td>
                                             
                                         </tr>

@@ -1,7 +1,7 @@
 <?php include "cabecera.php"; ?>
 <section class="container bg-white">
     <div class="row p-3">
-        <div class="col-4">
+        <div class="col-5">
             <div class="card">
                 <div class="card-body">
                     <h4 class="card-title">REGISTRAR USUARIO</h4>
@@ -9,8 +9,13 @@
                             <div class="form-group">
                             <input type="text" placeholder="Ingresar Usuario" id="usuario" name="usuario" class="form-control" required="true">
                             </div>
-                            <div class="form-group">
-                            <input type="password" placeholder="Ingresar Contraseña" id="clave" name="clave" class="form-control"  required="true">
+                            <div class="form-row form-group align-items-center">
+                                <div class="col-7">
+                                    <input type="password" placeholder="Ingresar Contraseña" id="clave" name="clave" class="form-control"  required="true">
+                                </div>
+                                <div class="col-5">
+                                <button id="btnClave" type="button" class="btn btn-link" onclick="mostrarClavecita()">&#128065;</button>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <select class="form-control" id="personal">
@@ -40,7 +45,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-8">
+        <div class="col-7">
             <div class="table-responsive">
                 <table class="table table-dark">
                     <thead>
@@ -66,7 +71,7 @@
                                             <td><?php echo $dato['nombre'] ?></td>
                                             <td>
                                                 <button class="btn btn-info btn-sm" onclick="modalUsuario(<?php echo $dato['codigo']?>)">Editar</button>
-                                                <button class="btn btn-warning btn-sm" onclick="eliminarUsuario(<?php echo $dato['codigo']?>)">Eliminar</button>
+                                                <button class="btn btn-danger btn-sm" onclick="eliminarUsuario(<?php echo $dato['codigo']?>)">Eliminar</button>
                                             </td>
                                             
                                         </tr>
